@@ -64,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
          */
         String priceMessage = orderSummary(nameIs, price, hasWhippedCream, hasChocolate);
 
+
+        /**
+         * Create an intent to use an email application to send the
+         * orderSummary out for order completion
+         */
         Intent composeEmail= new Intent(Intent.ACTION_SENDTO);
         composeEmail.setData(Uri.parse("mailto:"));
         composeEmail.putExtra(Intent.EXTRA_SUBJECT, "Coffee Order");
