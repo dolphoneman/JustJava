@@ -9,6 +9,8 @@
 package com.example.android.justjava;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -61,7 +63,16 @@ public class MainActivity extends AppCompatActivity {
          * Piece together the order and send it to orderSummary
          */
         String priceMessage = orderSummary(nameIs, price, hasWhippedCream, hasChocolate);
-        displayMessage(priceMessage);
+
+        Intent composeEmail= new Intent(Intent.ACTION_SENDTO);
+        composeEmail.setData(Uri.parse("mailto:"));
+        composeEmail.putExtra(Intent.EXTRA_SUBJECT, "Coffee Order");
+        composeEmail.putExtra(Intent.EXTRA_TEXT, priceMessage);
+        if (composeEmail.resolveActivity(getPackageManager()) != null) {
+            startActivity(composeEmail);
+        }
+
+ //       displayMessage(priceMessage); //NOT USED AFTER ADDING EMAIL FUNCTIONALITY
         }
 
     /**
@@ -191,9 +202,11 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method displays the given text on the screen.
-     */
+     * NOT USED AFTER ADDING EMAIL FUNCTIONALITY
+     *
     private void displayMessage(String message) {
         TextView orderSummaryTextView = findViewById(R.id.order_summary_text_view);
         orderSummaryTextView.setText(message);
     }
+     */
 }
