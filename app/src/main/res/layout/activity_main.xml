@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="Name"
+            android:hint="@string/nameHere"
             android:inputType="textCapWords"/>
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Toppings"
+            android:text="@string/toppings"
             android:textAllCaps="true" />
 
         <CheckBox
@@ -35,7 +35,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:paddingLeft="24dp"
-            android:text="Whipped Cream add $1"
+            android:text="@string/whippedCreamPrice"
             android:textSize="16sp" />
 
         <CheckBox
@@ -45,14 +45,14 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:paddingLeft="24dp"
-            android:text="Chocolate add $2"
+            android:text="@string/chocolatePrice"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Quantity"
+            android:text="@string/quantity"
             android:textAllCaps="true" />
 
         <LinearLayout
@@ -85,13 +85,13 @@
 
         </LinearLayout>
 
-        <TextView
+       <!-- <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Order Summary"
+            android:text="@string/orderSummary"
             android:textAllCaps="true" />
 
         <TextView
@@ -101,7 +101,7 @@
             android:layout_marginLeft="16dp"
             android:text="$0"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp" /> -->
 
         <Button
             android:layout_width="wrap_content"

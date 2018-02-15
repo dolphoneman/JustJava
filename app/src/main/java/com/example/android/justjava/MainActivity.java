@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
          */
         Intent composeEmail= new Intent(Intent.ACTION_SENDTO);
         composeEmail.setData(Uri.parse("mailto:"));
-        composeEmail.putExtra(Intent.EXTRA_SUBJECT, "Coffee Order");
+        composeEmail.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.emailTitle));
         composeEmail.putExtra(Intent.EXTRA_TEXT, priceMessage);
         if (composeEmail.resolveActivity(getPackageManager()) != null) {
             startActivity(composeEmail);
@@ -87,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
      * @return text summary
      */
     private String orderSummary(String nameIs, int price, boolean addWhippedCream, boolean addChocolate){
-        String priceMessage = "Name: " +nameIs;
-        priceMessage = priceMessage + "\nWants whipped cream? "+ addWhippedCream;
-        priceMessage = priceMessage + "\nWants chocolate? "+ addChocolate;
-        priceMessage = priceMessage + "\nQuantity: " + quantity;
-        priceMessage = priceMessage + "\nTotal = $" + price;
-        priceMessage = priceMessage + "\nThank you!";
+        String priceMessage = getString(R.string.nameHere) + ": " + nameIs;
+        priceMessage = priceMessage + "\n" + getString(R.string.whippedQuestion) + " " + addWhippedCream;
+        priceMessage = priceMessage + "\n" + getString(R.string.chocolateQuestion) + " " + addChocolate;
+        priceMessage = priceMessage + "\n" + getString(R.string.quantity) + ": " + quantity;
+        priceMessage = priceMessage + "\n" + getString(R.string.total)+ price;
+        priceMessage = priceMessage + "\n " + getString(R.string.thankYou);
         return priceMessage;
     }
 
