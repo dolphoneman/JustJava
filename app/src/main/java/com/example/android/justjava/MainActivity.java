@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(composeEmail);
         }
 
- //       displayMessage(priceMessage); //NOT USED AFTER ADDING EMAIL FUNCTIONALITY
+     //   displayMessage(priceMessage); //NOT USED AFTER ADDING EMAIL FUNCTIONALITY
         }
 
     /**
@@ -212,6 +212,6 @@ public class MainActivity extends AppCompatActivity {
     private void displayMessage(String message) {
         TextView orderSummaryTextView = findViewById(R.id.order_summary_text_view);
         orderSummaryTextView.setText(message);
-    }
-     */
+    }*/
+
 }
